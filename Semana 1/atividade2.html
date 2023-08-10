@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <h1>Atividade 2</h1>
+    <a href="../index.html">Voltar</a>
+    <script type="text/javascript">
+        
+        let num, div = 2;
+        
+        //Validar se numero é inteiro e positivo
+        do{
+            num = prompt("Digite um numero inteiro valido: ");
+        }while(isNaN(num) || num<1 || num%1 != 0);
+
+        //Verificar se é primo
+        while(num != 1 && num%div != 0)
+            div++;
+        
+        if(num==div) alert("É primo");
+        else alert("Não é primo");
+
+    </script>
+</body>
+</html>
