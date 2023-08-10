@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let x = prompt("Digite algo: ");
+        if(confirm("Quer verificar o tipo do dado informado ?")){
+            if (x === '') {document.write("É vazio")}
+            else if (!isNaN(x)) {document.write("É numero")}
+            else if (x == 'true' || x == 'false') {document.write("É booleano")}
+            else {document.write("É string")}
+        }
+        else{
+            document.write("Obrigado por visitar esta página.");
+        }
+    </script>
+</body>
+</html>
