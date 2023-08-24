@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <a href="index.html">Voltar</a>
+    <form">
+        <label for="brand">Brand: </label>
+        <input id="brand" type="text" name="brand">
+        <label for="model">Model: </label>
+        <input id="model" type="text" name="model">
+        <label for="year">Year: </label>
+        <input id="year" type="number" name="year">
+        <label for="color">Color: </label>
+        <input id="color" type="text" name="color">
+        <label for="miliege">Miliege: </label>
+        <input id="miliege" type="number" name="miliege">
+        <label for="value_fipe">Value Fipe: </label>
+        <input id="value" type="number" name="value_fipe">
+        <button onclick="createObject()">Click Here</button>
+    </form>
+
+    <script>
+        
+        function createObject()
+        {
+            var car = {
+                brand: document.getElementById("brand").value,
+                model: document.getElementById("model").value,
+                year: document.getElementById("year").value,
+                color: document.getElementById("color").value,
+                miliege: document.getElementById("miliege").value,
+                value_fipe: document.getElementById("value").value,
+                anosUtilizado: function() {
+                    return new Date().getFullYear() - year;
+                },
+                valorMercado: function() {
+                    if(miliege <= 30000) return value_fipe * 1.1;
+                    else if(miliege > 30000 && miliege <= 50000) return value_fipe;
+                    else return value_fipe * 0.9;
+                }
+            }
+        };
+
+    </script>
+</body>
+</html>

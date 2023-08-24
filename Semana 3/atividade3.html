@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <form>
+        <p>Digite um texto: </p>
+        <input type="text" id="text">
+        <button onclick="checkText()">Click</button>
+    </form> 
+        <script>
+            function checkText()
+            {
+                var text = document.getElementById("text").value;
+                var regExp = /[\W_]/g; //remover cacteres indesejavel
+                var text = text.toLowerCase().replace(regExp,'');
+                var reverseText  = text.split('').reverse().join('');
+                if(text == reverseText) alert("Is a palindrome");
+                else alert("Is not a palindrome");
+            }
+
+        </script>   
+</body>
+</html>

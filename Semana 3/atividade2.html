@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <a href="index.html">Voltar</a>
+    <div id="Clock"></div>
+    <script>
+        updateClock();
+        function updateClock()
+        {
+            var hour = new Date();
+            const time = String(hour.getHours()).padStart(2,'0')+":"+String(hour.getMinutes()).padStart(2,'0')+":"+String(hour.getSeconds()).padStart(2,'0');
+            document.getElementById("Clock").textContent = time;
+
+            setTimeout(updateClock, 1000);
+        }
+    </script>
+</body>
+</html>
