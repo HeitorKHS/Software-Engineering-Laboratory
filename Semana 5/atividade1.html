@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atividade 1</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <a href="index.html">Voltar</a>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+        function Elemento({letter}) 
+        {
+            return document.getElementById("root").innerHTML += letter;
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        const text = "Venha estudar na Fatec";
+        let cont = 0;
+
+        function tick()
+        {
+            if(cont < text.length)
+            {
+                let letter = text[cont];
+                root.render(<Elemento letter = {letter} />);
+                cont++;
+            }   
+        }
+        
+        setInterval(tick,500);
+    
+    </script>
+  </body>
+</html>
